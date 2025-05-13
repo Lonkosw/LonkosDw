@@ -1,0 +1,83 @@
+body {
+  font-family: 'Georgia', serif;
+  background: #fdf3e7;
+  margin: 0;
+  padding: 0;
+}
+
+.checkout-container {
+  max-width: 700px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #8b0000;
+  margin-bottom: 30px;
+}
+
+#resumo-pedido {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 30px;
+}
+
+.resumo-item {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.resumo-item p {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.resumo-item .preco {
+  font-size: 1.2em;
+  color: #27ae60;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #27ae60;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1e8449;
+}
+
+.pagamento-container {
+  margin-top: 30px;
+}
+
+.pagamento-container button {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.area-pagamento {
+  margin-top: 20px;
+  font-size: 18px;
+}

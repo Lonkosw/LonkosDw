@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Monte sua Pizza</title>
+  <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+  <div class="menu-container">
+    <div class="sidebar">
+      <h2>Comanda</h2>
+      <div id="comanda-lista" class="comanda-lista"></div>
+      <button onclick="finalizarPedido()">Finalizar Pedido</button>
+      <button onclick="reiniciarPedido()">Reiniciar Pedido</button>
+    </div>
+
+    <div class="content">
+      <div class="controle-montagem">
+        <select id="tamanhoPizza">
+          <option value="">Escolha o tamanho</option>
+   
+          <option value="media">Média</option>
+          <option value="grande">Grande</option>
+        </select>
+
+        <select id="quantidadeSabores">
+          <option value="">Quantidade de sabores</option>
+          <option value="1">1 Sabor</option>
+          <option value="2">2 Sabores</option>
+        </select>
+
+        <button id="montarPizzaBtn" onclick="montarPizza()">Montar Pizza</button>
+        <button id="excluirUltimoSaborBtn" onclick="excluirUltimoSabor()" disabled>Excluir Último</button>
+      </div>
+
+      <div id="grid-sabores" class="grid-sabores">
+        <!-- Exemplo de pizzas com preços -->
+        <div class="sabor" onclick="selecionarSabor('Calabresa', 15.00)">
+          <img src="img/calabresa.webp" alt="Calabresa">
+          <p>Calabresa</p>
+          <span>R$ 15,00</span>
+        </div>
+
+        <div class="sabor" onclick="selecionarSabor('Portuguesa', 18.00)">
+          <img src="img/portuguesa.webp" alt="Portuguesa">
+          <p>Portuguesa</p>
+          <span>R$ 18,00</span>
+        </div>
+
+        <div class="sabor" onclick="selecionarSabor('Quatro Queijos', 22.00)">
+          <img src="img/quatro-queijos.webp" alt="Quatro Queijos">
+          <p>Quatro Queijos</p>
+          <span>R$ 22,00</span>
+        </div>
+
+        <div class="sabor" onclick="selecionarSabor('Frango Especial', 20.00)">
+          <img src="img/frango-especial.webp" alt="Frango Especial">
+          <p>Frango c/ Catupiry</p>
+          <span>R$ 20,00</span>
+        </div>
+
+        <div class="sabor" onclick="selecionarSabor('Marguerita', 16.00)">
+          <img src="img/marguerita.webp" alt="Marguerita">
+          <p>Marguerita</p>
+          <span>R$ 16,00</span>
+        </div>
+
+        <!-- Novos sabores com preços -->
+        <div class="sabor" onclick="selecionarSabor('Pepperoni', 19.00)">
+          <img src="img/pepperoni.webp" alt="Pepperoni">
+          <p>Pepperoni</p>
+          <span>R$ 19,00</span>
+        </div>
+
+        <div class="sabor" onclick="selecionarSabor('Bacon Especial', 17.00)">
+          <img src="img/bacon-especial.webp" alt="bacon-especial">
+          <p>Bacon</p>
+          <span>R$ 17,00</span>
+        </div>
+
+        <div class="sabor" onclick="selecionarSabor('mussarela', 21.00)">
+          <img src="img/mussarela.webp" alt="mussarela">
+          <p>Frango c/ Cream Cheese</p>
+          <span>R$ 21,00</span>
+        </div>
+
+        <div class="sabor" onclick="selecionarSabor('Vegetariana', 18.50)">
+          <img src="img/vegetariana.webp" alt="Vegetariana">
+          <p>Vegetariana</p>
+          <span>R$ 18,50</span>
+        </div>
+        
+      </div>
+
+      <div id="pre-comanda" class="pre-comanda"></div>
+      <button id="finalizarPizzaBtn" onclick="finalizarPizza()" disabled>Adicionar Pizza à Comanda</button>
+    </div>
+  </div>
+  <script src="js/menu.js"></script>
+</body>
+</html>

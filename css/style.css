@@ -1,0 +1,71 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: url('../img/fundo-pizza.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Centraliza a página principal */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Conteúdo do meio */
+.container {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Cabeçalho */
+header h1 {
+  font-size: 3em;
+  margin-bottom: 30px;
+  color: #f8e9d2;
+  text-shadow: 2px 2px #8b0000;
+}
+
+/* Botão principal */
+button {
+  background-color: #c0392b;
+  color: white;
+  font-size: 1.5em;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #a93226;
+}
+
+/* Rodapé opcional */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  font-size: 0.9em;
+}

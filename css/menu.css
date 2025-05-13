@@ -1,0 +1,170 @@
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    background: #f2d6b4;
+    transition: background-color 0.5s ease; /* Transição suave de cor de fundo */
+}
+
+body.loading {
+    pointer-events: none; /* Desabilita interação com a página durante carregamento */
+    opacity: 0.6; /* Diminui a opacidade para indicar que a página está carregando */
+}
+
+.menu-container {
+    display: flex;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.sidebar {
+    width: 230px;
+    background-color: #5e5919;
+    color: white;
+    padding:15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 1350px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.comanda-lista {
+    background-color: #ffffff;
+    color: #000;
+    padding: 10px;
+    height: 300px;
+    font-weight: bold;
+    font-size: medium;
+    overflow-y: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: #f2d6b4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar button:hover {
+    background-color: #1e8449;
+    transform: scale(1.05); /* Efeito de aumento no botão */
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+    background: url('../img/fundo-madeira.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    transition: padding 0.3s ease;
+}
+
+.controle-montagem {
+    margin-bottom: 20px;
+    background-color: #5e5919;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+select, button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 6px;
+    background-color: #f2d6b4;
+    color: white;;
+    font-weight: bold;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.grid-sabores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Exibe 3 cards por linha */
+    gap: 20px;
+    margin-bottom: 20px;
+    justify-items: center;
+    transition: grid-template-columns 0.3s ease;
+}
+
+.grid-sabores .sabor {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px; /* Aumentei o padding para aumentar o tamanho do card */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    width: 220px; /* Aumentei o tamanho do card */
+    max-width: 250px; /* Aumentei o tamanho máximo do card */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease; /* Efeito de animação nos cards */
+}
+
+.grid-sabores .sabor:hover {
+    transform: scale(1.05); /* Efeito de aumento nos cards ao passar o mouse */
+}
+
+.grid-sabores .sabor img {
+    width: 100%;
+    height: 210px; /* Aumentei a altura das imagens */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.grid-sabores .sabor p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #f2d6b4;
+    font-size: 1.1em; /* Aumentei o tamanho da fonte */
+}
+
+.grid-sabores .sabor span {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #f2d6b4;
+    margin-top: 10px;
+}
+
+.pre-comanda {
+    background-color: rgba(255, 255, 255, 0.87);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    min-height: 50px;
+}
+
+#finalizarPizzaBtn {
+    background-color: #f2d6b4;;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#finalizarPizzaBtn:hover {
+    background-color: #f0e8e7;
+}
+
+
+.sabor.desabilitado {
+    pointer-events: none;
+    opacity: 0.4;
+  }
+  

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+  <div class="checkout-container">
+    <h1>Resumo do Pedido</h1>
+    <div id="resumo-pedido"></div>
+    <div class="pagamento-container">
+        <h2>Escolha a forma de pagamento:</h2>
+        <button onclick="pagarComCartao()">Cartão (Débito/Crédito)</button>
+        <button onclick="pagarComPix()">Pix</button>
+        <button onclick="pagarComDinheiro()">Dinheiro</button>
+      
+        <div id="area-pagamento" class="area-pagamento"></div>
+        <div id="qr-code-container" style="text-align: center; display: none;">
+          <img id="qr-code-pix" src="img/qr-code-perfeito.png" alt="QR Code Pix" style="width: 250px; margin: 10px auto;">
+        </div>
+      </div>
+  </div>
+  <script src="js/checkout.js"></script>
+</body>
+</html>
