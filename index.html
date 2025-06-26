@@ -8,12 +8,16 @@
 <body>
 
   <header>
-    <h1>Bem-vindo à Pizzaria!</h1>
+    <div class="header-container">
+      <h1>Pizzaria Autoatendimento</h1>
+      <button class="btn-login" onclick="mostrarLogin()">Entrar</button>
+    </div>
   </header>
 
   <main>
     <section class="container">
-      <button onclick="iniciarPedido()">Iniciar Pedido</button>
+      <h2>Monte sua pizza com facilidade!</h2>
+      <button class="btn-destaque" onclick="iniciarPedido()">Iniciar Pedido</button>
     </section>
   </main>
 
@@ -21,6 +25,48 @@
     <p>&copy; 2025 Pizzaria Autoatendimento</p>
   </footer>
 
-  <script src="js/script.js"></script>
-</body>
-</html>
+<!-- Modal de Login/Cadastro -->
+<div id="login-modal">
+  <div class="login-box">
+
+    <!-- Botão voltar -->
+    <div class="modal-header">
+      <span class="voltar-seta" onclick="fecharModal()">&#8592;</span>
+    </div>
+
+    <!-- Login -->
+    <div id="login-form">
+      <h2>Login</h2>
+      <input type="text" id="usuario" placeholder="Usuário">
+      <input type="password" id="senha" placeholder="Senha">
+      <button class="btn-confirmar" id="btn-login">Entrar</button>
+      <p class="mensagem-link">
+        Não tem uma conta?
+        <span onclick="mostrarCadastro()" class="link-verde">Cadastre-se</span>
+      </p>
+    </div>
+
+    <!-- Cadastro -->
+    <div id="cadastro-form" style="display: none;">
+      <h2>Cadastro</h2>
+      <input type="text" id="cpf" placeholder="CPF">
+      <input type="text" id="telefone" placeholder="Telefone">
+      <input type="text" id="nome" placeholder="Nome completo">
+      <input type="password" id="senha-cadastro" placeholder="Senha">
+      <input type="password" id="senha-confirmar" placeholder="Repetir senha">
+      <button class="btn-confirmar" id="btn-cadastrar">Cadastrar-se</button>
+      <p class="mensagem-link">
+        Já possui conta?
+        <span onclick="mostrarLoginForm()" class="link-verde">Voltar</span>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+<script>
+  iniciarScripts();
+</script>
+
+
