@@ -56,5 +56,3 @@ router.post('/cadastrar', (req, res) => {
 });
 
 module.exports = router;
-
-
