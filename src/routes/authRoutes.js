@@ -1,4 +1,3 @@
-// src/routes/authRoutes.js
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
@@ -7,7 +6,6 @@ const path = require('path');
 // Caminho do arquivo JSON com usuários
 const usersPath = path.join(__dirname, '..', 'data', 'users.json');
 
-// Função auxiliar para carregar usuários
 function getUsers() {
   if (fs.existsSync(usersPath)) {
     const data = fs.readFileSync(usersPath, 'utf-8');
@@ -16,7 +14,6 @@ function getUsers() {
   return [];
 }
 
-// Login
 router.post('/login', (req, res) => {
   const { email, senha } = req.body;
   const users = getUsers();
@@ -24,7 +21,6 @@ router.post('/login', (req, res) => {
   const user = users.find(u => u.email === email && u.senha === senha);
 
   if (user) {
-    // Simulação de token simples
     const token = `${user.tipo}-${user.id}-${Date.now()}`;
     return res.json({ mensagem: 'Login bem-sucedido', token, tipo: user.tipo });
   }
@@ -33,3 +29,4 @@ router.post('/login', (req, res) => {
 });
 
 module.exports = router;
+
