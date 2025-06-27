@@ -2,14 +2,12 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
-// Middleware para ler JSON
 app.use(express.json());
 
-// ⬇️ Importa as rotas de autenticação
+// Importa as rotas de autenticação corretamente
 const authRoutes = require('./src/routes/authRoutes');
-app.use('/auth', authRoutes); // /auth/login vai funcionar aqui
+app.use('/auth', authRoutes);
 
-// Rota de teste raiz
 app.get('/', (req, res) => {
   res.send('Servidor está rodando 🚀');
 });
