@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "nome": "Gerente",
+    "email": "gerente@pizza.com",
+    "senha": "1234",
+    "tipo": "gerente"
+  },
+  {
+    "id": 2,
+    "nome": "Cliente",
+    "email": "cliente@pizza.com",
+    "senha": "1234",
+    "tipo": "cliente"
+  }
+]
